@@ -7,10 +7,15 @@
 
 
 
+//Bootstrape
+@import "../node_modules/bootstrap/scss/bootstrap";
 
-//Material
-// @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+//Primeng Bootstrape
+@import "~primeng/resources/themes/lara-light-blue/theme.css";
+@import "~primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import '~primeflex/primeflex.css';
 
 .example-form {
   min-width: 150px;

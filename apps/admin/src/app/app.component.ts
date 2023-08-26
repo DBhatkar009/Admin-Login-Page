@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'store-root',
+  // eslint-disable-next-line @angular-eslint/component-selector
+  selector: 'admin-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

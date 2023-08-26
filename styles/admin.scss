@@ -1,0 +1,23 @@
+
+// base file scss
+@import "./base/coloe.scss";
+@import "./base/mixin.scss";
+@import "./base/configuration.scss";
+@import "./base/font.scss";
+
+
+
+
+//Material
+// @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}

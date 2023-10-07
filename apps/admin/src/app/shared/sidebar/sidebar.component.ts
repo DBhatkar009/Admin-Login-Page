@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
+
+  public sidebarVisible = false;
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
 

@@ -1,0 +1,55 @@
+.admin{
+  &-wrapper{
+     height: 100%;
+     padding: 0;
+     margin: 0;
+  }
+
+  &-sidebar {
+    width: 100%;
+    background-color: rgb(5, 34, 19);
+     top: 0;
+
+
+     .links{
+       ul{
+         margin: 0;
+         padding: 0;
+
+         li {
+           display: block;
+           list-style: none;
+           width: 100%;
+
+           a{
+               color: var(--surface-50);
+               padding: 10px 15px;
+               display: block;
+               width: 100%;
+
+               &:hover {
+                 background-color: rgb(16, 229, 137);
+                 color: black;
+                 cursor: pointer;
+               }
+
+               i{
+                 margin-right: 8px;
+                 margin-top: 0;
+                 float: left;
+               }
+           }
+         }
+       }
+     }
+   }
+
+
+  &-main{
+     width: calc(100% - 175px);
+     margin-left: 175px;
+     background-color: #e0e0e0dd;
+  }
+
+}
+

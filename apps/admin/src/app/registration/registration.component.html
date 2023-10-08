@@ -1,4 +1,4 @@
-<form class="example-form">
+<!-- <form class="example-form">
   <mat-form-field class="example-full-width">
     <mat-label>Favorite food</mat-label>
     <input matInput placeholder="Ex. Pizza" value="Sushi">
@@ -8,4 +8,66 @@
     <mat-label>Leave a comment</mat-label>
     <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
   </mat-form-field>
-</form>
+</form> -->
+
+<div class="p-flex justify-content-center flex-wrap">
+
+  <div class="p-flex align-items-center justify-content-center w-4rem h-1rem border-round m-2 p-5">
+    <p-card header="Registration-Form" class="shadow-6">
+      <div class="p-grid p-formgrid p-field">
+        <div class="p-col-12" >
+           <form>
+             <mat-form-field class="example-full-width">
+             <mat-label> First Name </mat-label>
+              <input matInput type="text" id="text" placeholder="Ex. First Name">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label> Last Name </mat-label>
+               <input matInput type="text" id="text" placeholder="Ex. Last Name">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label> Mobile No. </mat-label>
+               <input matInput type="number" id="number" placeholder="Ex. 9819154623" >
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label> Date Of Birth. </mat-label>
+              <input matInput [matDatepicker]="picker">
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label> Email Id </mat-label>
+              <input type="email" matInput placeholder="Ex. pat@example.com">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Enter your password</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+
+           </form>
+        </div>
+
+
+       
+        <div class="p-col-12">
+          <form>
+            <button mat-raised-button color="primary">Primary</button>
+          </form>
+
+        </div>
+
+
+      </div>
+    </p-card>
+  </div>
+
+</div>

@@ -1,11 +1,13 @@
 .example-form {
-  min-width: 150px;
-  max-width: 500px;
+  display: grid;
   width: 100%;
-  display:grid;
+  text-align: center;
 }
 
 .example-full-width {
   width: 100%;
-  display: inline-block;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

@@ -89,7 +89,7 @@ const UX_MODULE = [FormsModule, SidebarModule, ButtonModule, CardModule, Calenda
 	CheckboxModule,
 	TreeTableModule,
 	TreeModule,
-  
+
   MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,

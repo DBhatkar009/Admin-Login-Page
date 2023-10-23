@@ -9,19 +9,19 @@
             <mat-form-field class="example-full-width">
             <mat-label> First Name </mat-label>
              <input matInput type="text" id="text" placeholder="Ex. First Name" formControlName="firstName">
-             <mat-error>  First Name is <strong>required</strong> </mat-error>
+             <mat-error *ngIf="regisForm['firstName'].invalid && isSubmitted">  First Name is <strong>required</strong> </mat-error>
            </mat-form-field>
 
            <mat-form-field class="example-full-width">
              <mat-label> Last Name </mat-label>
               <input matInput type="text" id="text" placeholder="Ex. Last Name" formControlName="lastName">
-              <mat-error>  Last Name is <strong>required</strong> </mat-error>
+              <mat-error *ngIf="regisForm['lastName'].invalid && isSubmitted">  Last Name is <strong>required</strong> </mat-error>
            </mat-form-field>
 
            <mat-form-field class="example-full-width">
              <mat-label> Mobile No. </mat-label>
               <input matInput type="number" id="number" placeholder="Ex. 9819154623" formControlName="phoneNumber">
-              <mat-error>  Mobile No is <strong>required</strong> </mat-error>
+              <mat-error *ngIf="regisForm['phoneNumber'].invalid && isSubmitted">  Mobile No is <strong>required</strong> </mat-error>
            </mat-form-field>
 
            <mat-form-field class="example-full-width">
@@ -30,7 +30,7 @@
              <mat-hint>MM/DD/YYYY</mat-hint>
              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
              <mat-datepicker #picker></mat-datepicker>
-             <mat-error>  Date Of Birth is <strong>required</strong> </mat-error>
+             <mat-error *ngIf="regisForm['dateOfBirth'].invalid && isSubmitted">  Date Of Birth is <strong>required</strong> </mat-error>
            </mat-form-field>
 
            <mat-form-field class="example-full-width">
@@ -39,7 +39,7 @@
              <mat-error>
               Please enter a valid email address
             </mat-error>
-            <mat-error>
+            <mat-error *ngIf="regisForm['eMailId'].invalid && isSubmitted">
               Email is <strong>required</strong>
             </mat-error>
            </mat-form-field>
@@ -50,7 +50,7 @@
              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
              </button>
-             <mat-error>  Password is <strong>required</strong> </mat-error>
+             <mat-error *ngIf="regisForm['passWord'].invalid && isSubmitted">  Password is <strong>required</strong> </mat-error>
            </mat-form-field>
 
       </form>

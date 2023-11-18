@@ -6,6 +6,21 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
+import { SharedModule, Header, Footer } from 'primeng/api';
+import { TableModule } from 'primeng/table';
+import { Dialog, DialogModule } from 'primeng/dialog';
+import { ConfirmDialog, ConfirmDialogModule } from 'primeng/confirmdialog';
+import { DropdownModule } from 'primeng/dropdown';
+import { MenubarModule } from 'primeng/menubar';
+import { ListboxModule } from 'primeng/listbox';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { PanelModule } from 'primeng/panel';
+import { AccordionModule } from 'primeng/accordion';
+import { TabViewModule } from 'primeng/tabview';
+import { FocusTrapModule } from 'primeng/focustrap';
+import { CheckboxModule } from 'primeng/checkbox';
+import { TreeTableModule } from 'primeng/treetable';
+import { TreeModule } from 'primeng/tree';
 
 
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -59,6 +74,22 @@ import { RegistrationComponent } from './registration/registration.component';
 
 
 const UX_MODULE = [FormsModule, SidebarModule, ButtonModule, CardModule, CalendarModule,
+  SharedModule,
+	TableModule,
+	DialogModule,
+	ConfirmDialogModule,
+	DropdownModule,
+	MenubarModule,
+	ListboxModule,
+	RadioButtonModule,
+	PanelModule,
+	AccordionModule,
+	TabViewModule,
+	FocusTrapModule,
+	CheckboxModule,
+	TreeTableModule,
+	TreeModule,
+
   MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,

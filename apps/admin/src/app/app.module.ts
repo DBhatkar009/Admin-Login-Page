@@ -21,6 +21,9 @@ import { FocusTrapModule } from 'primeng/focustrap';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TreeTableModule } from 'primeng/treetable';
 import { TreeModule } from 'primeng/tree';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputMaskModule } from 'primeng/inputmask';
+import { PasswordModule } from 'primeng/password';
 
 
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -89,6 +92,9 @@ const UX_MODULE = [FormsModule, SidebarModule, ButtonModule, CardModule, Calenda
 	CheckboxModule,
 	TreeTableModule,
 	TreeModule,
+  InputNumberModule,
+  InputMaskModule,
+  PasswordModule,
 
   MatAutocompleteModule,
   MatBadgeModule,
@@ -138,12 +144,12 @@ const routes: Routes = [
         path: 'Dashboard',
         component: DashboardComponent,
       },
+      {
+        path: 'Registration',
+        component: RegistrationComponent
+      },
     ],
 
-  },
-  {
-    path: 'Registration',
-    component: RegistrationComponent
   },
 
   {

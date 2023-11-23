@@ -1,7 +1,7 @@
-<div class="flex justify-content-center flex-wrap">
+<!-- <div class="flex justify-content-center flex-wrap">
 
-  <div class="flex bg-primary align-items-center justify-content-center w-4rem h-1rem border-round m-2 p-5">
-    <p-card header="Registration-Form">
+  <div class="flex w-8 align-items-center justify-content-center border-round m-3 p-3">
+    <p-card header="Registration-Form" class="shadow-5">
       <div class="grid formgrid field">
         <div class="col-12 md-9">
 
@@ -66,4 +66,49 @@
     </p-card>
   </div>
 
+</div> -->
+
+
+<div class="flex flex-wrap overflow-hidden justify-content-center py-5">
+
+  <div class="flex w-7 surface-200 border-round p-3 m-3 justify-content-center shadow-4">
+    <div class="p-fluid formgrid grid">
+      <div class="field col-12 md:col-6">
+        <label for="firstname1">Firstname</label>
+        <input id="firstname1" type="text" placeholder="Firstname" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+      </div>
+
+      <div class="field col-12 md:col-6">
+        <label for="lastname2">Lastname</label>
+        <input id="lastname2" type="text" placeholder="Lastname" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+      </div>
+
+      <div class="field col-12 md:col-6">
+        <label for="mobileno3"> Mobile No.</label>
+        <p-inputMask mask="(999) 999-9999" id="mobileno3" placeholder="(999) 999-9999"></p-inputMask>
+      </div>
+
+      <div class="field col-12 md:col-6">
+         <label for="dateofbirth4"> Date of Birth </label>
+         <p-calendar id="dateofbirth4"></p-calendar>
+      </div>
+
+      <div class="field col-12 md:col-6">
+        <label for="emailid5"> Email_Id </label>
+        <input id="emailid5" type="email" placeholder="example@outlook.com" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+      </div>
+
+
+      <div class="field col-12 md:col-6">
+        <label for="password6"> Password </label>
+        <p-password id="password6" [toggleMask]="true"></p-password>
+      </div>
+
+     </div>
+    </div>
 </div>
+
+
+
+
+

@@ -72,39 +72,41 @@
 <div class="flex flex-wrap overflow-hidden justify-content-center py-2">
 
   <div class="flex w-8 surface-200 border-round p-3 m-3 justify-content-center shadow-4">
+    <form [formGroup]="registrationForm">
     <div class="p-fluid formgrid grid">
       <div class="field col-12 md:col-6">
         <label for="firstname1">Firstname</label>
-        <input id="firstname1" type="text" placeholder="Firstname" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        <input id="firstname1" type="text" placeholder="Firstname" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="firstName">
       </div>
 
       <div class="field col-12 md:col-6">
         <label for="lastname2">Lastname</label>
-        <input id="lastname2" type="text" placeholder="Lastname" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        <input id="lastname2" type="text" placeholder="Lastname" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="lastName">
       </div>
 
       <div class="field col-12 md:col-6">
         <label for="mobileno3"> Mobile No.</label>
-        <p-inputMask mask="(999) 999-9999" id="mobileno3" placeholder="(999) 999-9999"></p-inputMask>
+        <p-inputMask mask="(999) 999-9999" id="mobileno3" placeholder="(999) 999-9999" formControlName="phoneNumber"></p-inputMask>
       </div>
 
       <div class="field col-12 md:col-6">
          <label for="dateofbirth4"> Date of Birth </label>
-         <p-calendar id="dateofbirth4" placeholder="MM/DD/YYYY"></p-calendar>
+         <p-calendar id="dateofbirth4" placeholder="MM/DD/YYYY" formControlName="dateOfBirth"></p-calendar>
       </div>
 
       <div class="field col-12 md:col-6">
         <label for="emailid5"> Email_Id </label>
-        <input id="emailid5" type="email" placeholder="example@outlook.com" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        <input id="emailid5" type="email" formControlName="eMailId" placeholder="example@outlook.com" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
       </div>
 
 
       <div class="field col-12 md:col-6">
         <label for="password6"> Password </label>
-        <p-password id="password6" [toggleMask]="true" placeholder="Password"></p-password>
+        <p-password id="password6" [toggleMask]="true" placeholder="Password" formControlName="passWord"></p-password>
       </div>
 
      </div>
+    </form>
     </div>
 
     <div class="w-4 flex-shrink-1 border-round px-1 py-1 justify-content-center">

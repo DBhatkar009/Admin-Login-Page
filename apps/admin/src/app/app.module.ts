@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { SidebarModule } from 'primeng/sidebar';
@@ -65,6 +66,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 
+import { RegistrationService } from './service/registration.service';
 
 
 import { AppComponent } from './app.component';
@@ -171,11 +173,12 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     ...UX_MODULE,
   ],
-  providers: [],
+  providers: [RegistrationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

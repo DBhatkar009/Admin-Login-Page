@@ -1,5 +1,7 @@
+import { RegistrationService } from './../service/registration.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { Registration } from '../model/registration';
 
 @Component({
   selector: 'store-registration',
@@ -13,7 +15,7 @@ export class RegistrationComponent implements OnInit {
   isSubmitted: boolean = false;
 
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private registrationService: RegistrationService) {}
 
 
   ngOnInit(): void {
@@ -33,12 +35,16 @@ export class RegistrationComponent implements OnInit {
     if(this.registrationForm.invalid){
       return;
     }
-    console.log(this.regisForm['firstName'].value);
-    console.log(this.regisForm['lastName'].value);
-    console.log(this.regisForm['phoneNumber'].value);
-    console.log(this.regisForm['dateOfBirth'].value);
-    console.log(this.regisForm['eMailId'].value);
-    console.log(this.regisForm['passWord'].value);
+    const registration: Registration = {
+      firstName:this.regisForm['firstName'].value,
+      lastName:this.regisForm['lastName'].value,
+      phoneNumber:this.regisForm['phoneNumber'].value,
+      dateOfBirth:this.regisForm['dateOfBirth'].value,
+      eMailId:this.regisForm['eMailId'].value,
+      passWord:this.regisForm['passWord'].value
+    }
+   this.registrationService.createRegistration(registration).subscribe;
+   console.log(registration);
   }
 
   get regisForm() {

@@ -35,6 +35,9 @@ export class RegistrationComponent implements OnInit {
     }
     console.log(this.regisForm['firstName'].value);
     console.log(this.regisForm['lastName'].value);
+    console.log(this.regisForm['phoneNumber'].value);
+    console.log(this.regisForm['dateOfBirth'].value);
+    console.log(this.regisForm['eMailId'].value);
     console.log(this.regisForm['passWord'].value);
   }
 

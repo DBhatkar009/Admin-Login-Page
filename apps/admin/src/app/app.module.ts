@@ -21,6 +21,7 @@ import { FocusTrapModule } from 'primeng/focustrap';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TreeTableModule } from 'primeng/treetable';
 import { TreeModule } from 'primeng/tree';
+import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputMaskModule } from 'primeng/inputmask';
 import { PasswordModule } from 'primeng/password';
@@ -95,6 +96,7 @@ const UX_MODULE = [FormsModule, SidebarModule, ButtonModule, CardModule, Calenda
   InputNumberModule,
   InputMaskModule,
   PasswordModule,
+  InputTextModule,
 
   MatAutocompleteModule,
   MatBadgeModule,

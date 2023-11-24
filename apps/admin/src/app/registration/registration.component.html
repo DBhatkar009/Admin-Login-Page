@@ -5,34 +5,39 @@
     <div class="p-fluid formgrid grid">
       <div class="field col-12 md:col-6">
         <label for="firstname1">Firstname</label>
-        <input id="firstname1" type="text" placeholder="Firstname" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full ng-invalid ng-dirty" formControlName="firstName">
-        <small *ngIf="regisForm['firstName'].invalid && isSubmitted"></small>
+        <input pInputText id="firstname1" type="text" placeholder="Firstname" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="firstName">
+        <small *ngIf="regisForm['firstName'].invalid && isSubmitted" class="invalid"> firstame is required </small>
       </div>
 
       <div class="field col-12 md:col-6">
         <label for="lastname2">Lastname</label>
-        <input id="lastname2" type="text" placeholder="Lastname" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="lastName">
+        <input pInputText id="lastname2" type="text" placeholder="Lastname" class="border-round surface-border " formControlName="lastName">
+        <small class="invalid" *ngIf="regisForm['lastName'].invalid && isSubmitted"> last name is required</small>
       </div>
 
       <div class="field col-12 md:col-6">
         <label for="mobileno3"> Mobile No.</label>
         <p-inputMask mask="(999) 999-9999" id="mobileno3" placeholder="(999) 999-9999" formControlName="phoneNumber"></p-inputMask>
+        <small class="invalid" *ngIf="regisForm['phoneNumber'].invalid && isSubmitted"> mobile no is required</small>
       </div>
 
       <div class="field col-12 md:col-6">
          <label for="dateofbirth4"> Date of Birth </label>
          <p-calendar id="dateofbirth4" placeholder="MM/DD/YYYY" formControlName="dateOfBirth" [showIcon]="true"></p-calendar>
+         <small class="invalid" *ngIf="regisForm['dateOfBirth'].invalid && isSubmitted"> date of birth is required</small>
       </div>
 
       <div class="field col-12 md:col-6">
         <label for="emailid5"> Email_Id </label>
-        <input id="emailid5" type="email" formControlName="eMailId" placeholder="example@outlook.com" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        <input pInputText id="emailid5" type="email" formControlName="eMailId" placeholder="example@outlook.com" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        <small class="invalid" *ngIf="regisForm['eMailId'].invalid && isSubmitted"> email id is required</small>
       </div>
 
 
       <div class="field col-12 md:col-6">
         <label for="password6"> Password </label>
         <p-password id="password6" [toggleMask]="true" placeholder="Password" formControlName="passWord"></p-password>
+        <small class="invalid" *ngIf="regisForm['passWord'].invalid && isSubmitted"> password is required</small>
       </div>
 
      </div>

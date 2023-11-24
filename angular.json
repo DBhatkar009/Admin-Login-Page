@@ -118,17 +118,17 @@
         }
       }
     },
-    "registration": {
+    "regisration": {
       "projectType": "library",
-      "root": "libs/registration",
-      "sourceRoot": "libs/registration/src",
+      "root": "libs/regisration",
+      "sourceRoot": "libs/regisration/src",
       "prefix": "store",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/registration"],
+          "outputs": ["coverage/libs/regisration"],
           "options": {
-            "jestConfig": "libs/registration/jest.config.ts",
+            "jestConfig": "libs/regisration/jest.config.ts",
             "passWithNoTests": true
           }
         },
@@ -136,8 +136,8 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/registration/**/*.ts",
-              "libs/registration/**/*.html"
+              "libs/regisration/**/*.ts",
+              "libs/regisration/**/*.html"
             ]
           }
         }

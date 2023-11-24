@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@store/regisration": ["libs/regisration/src/index.ts"],
       "@store/registration": ["libs/registration/src/index.ts"],
       "@store/user": ["libs/user/src/index.ts"]
     }

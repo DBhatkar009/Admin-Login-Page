@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { Component, OnInit } from '@angular/core';
+import { RegistrationService } from '../../service/registration.service';
+import { Registration } from '../../model/registration';
 
 @Component({
   selector: 'store-dashboard',
@@ -6,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  constructor() {}
+  public registration: Registration[] = [];
 
-  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method, @typescript-eslint/no-empty-function
-  ngOnInit(): void {}
+
+  constructor(private registrationService: RegistrationService) {}
+
+
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
+  ngOnInit(): void {
+    this.registrationService.getRegistration().subscribe((Regis)=>{
+      this.registration = Regis;
+    });
+  }
 }

@@ -1,1 +1,27 @@
-<p style="text-align: center;">login works!</p>
+<div class="flex flex-wrap overflow-hidden justify-content-center py-8">
+
+  <div class="w-7 flex surface-200 border-round p-5 m-5 justify-content-center shadow-6">
+
+    <div class="p-fluid formgrid grid">
+      <div class="field col-12 md:col-6">
+        <label for="emailid5"> Email_Id </label>
+        <input pInputText id="emailid5" type="email" placeholder="example@outlook.com" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+
+        <div class="field col-12 md:col-6">
+          <label for="password6"> Password </label>
+        <p-password id="password6" [toggleMask]="true" placeholder="Password"></p-password>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="w-5 flex-shrink-1 border-round px-1 py-1 justify-content-center">
+       <div class="p-fluid formgrid grid">
+        <div class="field col-12">
+          <button pButton pRipple label="Login" class="p-button-success"></button>
+        </div>
+       </div>
+      </div>
+
+</div>

@@ -12,10 +12,10 @@ export class RegistrationService {
   constructor(private http: HttpClient) { }
 
   getRegistration(): Observable<Registration[]>{
-    return this.http.get<Registration[]>('http://localhost:3000/api/v1/registrations');
+    return this.http.get<Registration[]>('http://localhost:3000/api/v1/registrations/');
   }
 
   createRegistration(registration: Registration){
-    return this.http.post('http://localhost:3000/api/v1/registrations', registration);
+    return this.http.post<Registration>('http://localhost:3000/api/v1/registrations', registration);
   }
 }

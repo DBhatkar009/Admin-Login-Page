@@ -26,7 +26,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputMaskModule } from 'primeng/inputmask';
 import { PasswordModule } from 'primeng/password';
-
+import { ToolbarModule } from 'primeng/toolbar';
 
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -68,7 +68,6 @@ import { MatTreeModule } from '@angular/material/tree';
 
 import { RegistrationService } from './service/registration.service';
 
-
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -77,28 +76,32 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 
-
-
-const UX_MODULE = [FormsModule, SidebarModule, ButtonModule, CardModule, CalendarModule,
+const UX_MODULE = [
+  FormsModule,
+  SidebarModule,
+  ButtonModule,
+  CardModule,
+  CalendarModule,
   SharedModule,
-	TableModule,
-	DialogModule,
-	ConfirmDialogModule,
-	DropdownModule,
-	MenubarModule,
-	ListboxModule,
-	RadioButtonModule,
-	PanelModule,
-	AccordionModule,
-	TabViewModule,
-	FocusTrapModule,
-	CheckboxModule,
-	TreeTableModule,
-	TreeModule,
+  TableModule,
+  DialogModule,
+  ConfirmDialogModule,
+  DropdownModule,
+  MenubarModule,
+  ListboxModule,
+  RadioButtonModule,
+  PanelModule,
+  AccordionModule,
+  TabViewModule,
+  FocusTrapModule,
+  CheckboxModule,
+  TreeTableModule,
+  TreeModule,
   InputNumberModule,
   InputMaskModule,
   PasswordModule,
   InputTextModule,
+  ToolbarModule,
 
   MatAutocompleteModule,
   MatBadgeModule,
@@ -137,7 +140,8 @@ const UX_MODULE = [FormsModule, SidebarModule, ButtonModule, CardModule, Calenda
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatTreeModule, ];
+  MatTreeModule,
+];
 
 const routes: Routes = [
   {
@@ -150,15 +154,14 @@ const routes: Routes = [
       },
       {
         path: 'Registration',
-        component: RegistrationComponent
+        component: RegistrationComponent,
       },
     ],
-
   },
 
   {
     path: 'Login',
-    component: LoginComponent
+    component: LoginComponent,
   },
 ];
 

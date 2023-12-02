@@ -43,7 +43,7 @@ export class RegistrationComponent implements OnInit {
       eMailId:this.regisForm['eMailId'].value,
       passWord:this.regisForm['passWord'].value
     }
-   this.registrationService.createRegistration(registration).subscribe;
+   this.registrationService.createRegistration(registration).subscribe();
    console.log(registration);
   }
 
